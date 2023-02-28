@@ -1,4 +1,5 @@
 public class Condo implements Property {
+    private String streetNumber;
     private Address address;
     private int unitNumber;
     private int numberOfBedrooms;
@@ -6,13 +7,22 @@ public class Condo implements Property {
     private int squareFootage;
     private boolean available;
 
-    public Condo(Address address, int unitNumber, int numberOfBedrooms, int numberOfBathrooms, int squareFootage) {
+    public Condo(String streetNumber, Address address, int unitNumber, int numberOfBedrooms, int numberOfBathrooms, int squareFootage, boolean available) {
+        this.streetNumber = streetNumber;
         this.address = address;
         this.unitNumber = unitNumber;
         this.numberOfBedrooms = numberOfBedrooms;
         this.numberOfBathrooms = numberOfBathrooms;
         this.squareFootage = squareFootage;
-        this.available = true;
+        this.available = available;
+    }
+
+    public String getStreetNumber() {
+        return streetNumber;
+    }
+
+    public void setStreetNumber(String streetNumber) {
+        this.streetNumber = streetNumber;
     }
 
     public void setAddress(Address address) {
@@ -56,13 +66,26 @@ public class Condo implements Property {
     }
 
     @Override
+    public String toString() {
+        return "Condo{" +
+                "streetNumber='" + streetNumber + '\'' +
+                ", address=" + address +
+                ", unitNumber=" + unitNumber +
+                ", numberOfBedrooms=" + numberOfBedrooms +
+                ", numberOfBathrooms=" + numberOfBathrooms +
+                ", squareFootage=" + squareFootage +
+                ", available=" + available +
+                '}';
+    }
+
+    @Override
     public String getAddress() {
-        return address.toString() + " Unit #" + unitNumber;
+        return "UnitNumber=" + unitNumber + ", StreetNumber='" + streetNumber + '\'' + ", Address=" + address.toString();
     }
 
     @Override
     public boolean isAvailable() {
-        return available;
+        return false;
     }
 
     @Override
