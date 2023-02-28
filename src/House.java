@@ -13,6 +13,38 @@ public class House implements Property {
         this.available = true;
     }
 
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public int getNumberOfBedrooms() {
+        return numberOfBedrooms;
+    }
+
+    public void setNumberOfBedrooms(int numberOfBedrooms) {
+        this.numberOfBedrooms = numberOfBedrooms;
+    }
+
+    public int getNumberOfBathrooms() {
+        return numberOfBathrooms;
+    }
+
+    public void setNumberOfBathrooms(int numberOfBathrooms) {
+        this.numberOfBathrooms = numberOfBathrooms;
+    }
+
+    public int getSquareFootage() {
+        return squareFootage;
+    }
+
+    public void setSquareFootage(int squareFootage) {
+        this.squareFootage = squareFootage;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
     @Override
     public String getAddress() {
         return address.toString();
