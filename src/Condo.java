@@ -7,14 +7,14 @@ public class Condo implements Property {
     private int squareFootage;
     private boolean available;
 
-    public Condo(String streetNumber, Address address, int unitNumber, int numberOfBedrooms, int numberOfBathrooms, int squareFootage, boolean available) {
+    public Condo(String streetNumber, Address address, int unitNumber, int numberOfBedrooms, int numberOfBathrooms, int squareFootage) {
         this.streetNumber = streetNumber;
         this.address = address;
         this.unitNumber = unitNumber;
         this.numberOfBedrooms = numberOfBedrooms;
         this.numberOfBathrooms = numberOfBathrooms;
         this.squareFootage = squareFootage;
-        this.available = available;
+        this.available = false;
     }
 
     public String getStreetNumber() {

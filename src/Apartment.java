@@ -12,7 +12,7 @@ public class Apartment implements Property {
         this.numberOfBedrooms = numberOfBedrooms;
         this.numberOfBathrooms = numberOfBathrooms;
         this.squareFootage = squareFootage;
-        this.available = true;
+        this.available = false;
     }
 
     public void setAddress(Address address) {
