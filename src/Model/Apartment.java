@@ -64,7 +64,7 @@ public class Apartment implements Property {
 
     @Override
     public String getAddress() {
-        return " Apt #" + apartmentNumber + address.toString();
+        return "Apt #" + apartmentNumber + ", " +address.toString();
     }
 
     @Override
@@ -90,8 +90,7 @@ public class Apartment implements Property {
     @Override
     public String toString() {
         return "Apartment{" +
-                "address=" + address +
-                ", apartmentNumber=" + apartmentNumber +
+                getAddress() +
                 ", numberOfBedrooms=" + numberOfBedrooms +
                 ", numberOfBathrooms=" + numberOfBathrooms +
                 ", squareFootage=" + squareFootage +

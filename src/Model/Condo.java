@@ -70,9 +70,7 @@ public class Condo implements Property {
     @Override
     public String toString() {
         return "Condo{" +
-                "streetNumber='" + streetNumber + '\'' +
-                ", address=" + address +
-                ", unitNumber=" + unitNumber +
+                getAddress() +
                 ", numberOfBedrooms=" + numberOfBedrooms +
                 ", numberOfBathrooms=" + numberOfBathrooms +
                 ", squareFootage=" + squareFootage +
@@ -82,7 +80,7 @@ public class Condo implements Property {
 
     @Override
     public String getAddress() {
-        return "UnitNumber=" + unitNumber + ", StreetNumber='" + streetNumber + '\'' + ", Address=" + address.toString();
+        return "UnitNumber=" + unitNumber + ", StreetNumber='" + streetNumber + '\'' + ", " +address.toString();
     }
 
     @Override

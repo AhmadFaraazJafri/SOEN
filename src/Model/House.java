@@ -20,7 +20,7 @@ public class House implements Property {
     @Override
     public String getAddress() {
         return "streetNumber='" + streetNumber + '\'' +
-                ", address=" + address.toString();
+                "," + address.toString();
     }
 
     @Override
@@ -66,8 +66,7 @@ public class House implements Property {
     @Override
     public String toString() {
         return "House{" +
-                "streetNumber='" + streetNumber + '\'' +
-                ", address=" + address +
+                getAddress()  +
                 ", numberOfBedrooms=" + numberOfBedrooms +
                 ", numberOfBathrooms=" + numberOfBathrooms +
                 ", squareFootage=" + squareFootage +

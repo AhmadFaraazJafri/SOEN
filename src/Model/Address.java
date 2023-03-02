@@ -47,11 +47,9 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
-                "streetName='" + streetName + '\'' +
+        return "streetName='" + streetName + '\'' +
                 ", city='" + city + '\'' +
                 ", province='" + province + '\'' +
-                ", postalCode='" + postalCode + '\'' +
-                '}';
+                ", postalCode='" + postalCode + '\'';
     }
 }
