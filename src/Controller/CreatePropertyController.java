@@ -20,15 +20,16 @@ public class CreatePropertyController {
         int squareFootage = view.getSquareFootage();
         if (type == 1) {
             PropertyCreator creator = new ApartmentCreator();
-            Property property = creator.createProperty(streetNumber,address,  unitNumber,  numberOfBedrooms,  numberOfBathrooms,  squareFootage);
-            //store the property
+            Property property = creator.createProperty(streetNumber, address, unitNumber, numberOfBedrooms, numberOfBathrooms, squareFootage);
+            Main.properties.add(property);
         } else if (type == 2) {
             PropertyCreator creator = new CondoCreator();
-            Property property = creator.createProperty(streetNumber,address,  unitNumber,  numberOfBedrooms,  numberOfBathrooms,  squareFootage);
-        }
-        else if (type == 3) {
+            Property property = creator.createProperty(streetNumber, address, unitNumber, numberOfBedrooms, numberOfBathrooms, squareFootage);
+            Main.properties.add(property);
+        } else if (type == 3) {
             PropertyCreator creator = new HouseCreator();
-            Property property = creator.createProperty(streetNumber,address,  unitNumber,  numberOfBedrooms,  numberOfBathrooms,  squareFootage);
+            Property property = creator.createProperty(streetNumber, address, unitNumber, numberOfBedrooms, numberOfBathrooms, squareFootage);
+            Main.properties.add(property);
 
         }
     }
