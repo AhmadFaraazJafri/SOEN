@@ -12,9 +12,15 @@ public class CreatePropertyController {
     }
 
     public void createProperty(int type) {
-        String streetNumber = view.getStreetNumber();
+        String streetNumber = "";
+        int unitNumber = 0;
+        if (type != 1) {
+            streetNumber = view.getStreetNumber();
+        }
         Address address = view.getAddress();
-        int unitNumber = view.getUnitNumber();
+        if (type != 3) {
+            unitNumber = view.getUnitNumber();
+        }
         int numberOfBedrooms = view.getNumberOfBedrooms();
         int numberOfBathrooms = view.getNumberOfBathrooms();
         int squareFootage = view.getSquareFootage();

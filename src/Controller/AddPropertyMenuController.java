@@ -21,9 +21,11 @@ public class AddPropertyMenuController implements MenuController {
                 CreatePropertyController controller = new CreatePropertyController(new CreatePropertyView());
                 controller.createProperty(1);
             } else if (selection == 2) {
-                // handle "Condo" menu option
+                CreatePropertyController controller = new CreatePropertyController(new CreatePropertyView());
+                controller.createProperty(2);
             } else if (selection == 3) {
-                // handle "House" menu option
+                CreatePropertyController controller = new CreatePropertyController(new CreatePropertyView());
+                controller.createProperty(3);
             } else if (selection == 4) {
                 System.out.println("Returning to Main Menu...");
             } else {

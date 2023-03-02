@@ -1,6 +1,7 @@
 package Controller;
 
 import View.MenuView;
+import View.PropertyListView;
 
 import java.util.Map;
 
@@ -27,6 +28,9 @@ public class MainMenuController implements MenuController {
                 // handle "Rent a unit" menu option
             } else if (selection == 4) {
                 // handle "Display properties" menu option
+                Main main = new Main();
+                PropertyListController propertyListController = new PropertyListController(main, new PropertyListView());
+                propertyListController.displayProperties();
             } else if (selection == 5) {
                 // handle "Display tenants" menu option
             } else if (selection == 6) {

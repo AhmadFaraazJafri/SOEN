@@ -49,6 +49,11 @@ public class Apartment implements Property {
         return squareFootage;
     }
 
+    @Override
+    public String getStreetNumber() {
+        return null;
+    }
+
     public void setSquareFootage(int squareFootage) {
         this.squareFootage = squareFootage;
     }
@@ -75,6 +80,11 @@ public class Apartment implements Property {
     @Override
     public String getType() {
         return "Apartment";
+    }
+
+    @Override
+    public int getUnitNumber() {
+        return apartmentNumber;
     }
 
     @Override

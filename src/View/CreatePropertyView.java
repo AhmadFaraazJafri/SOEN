@@ -27,7 +27,7 @@ public class CreatePropertyView {
 
     public int getUnitNumber() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter unit number: ");
+        System.out.print("Enter unit/apartment number: ");
         return scanner.nextInt();
     }
 

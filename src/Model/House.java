@@ -39,6 +39,31 @@ public class House implements Property {
     }
 
     @Override
+    public int getUnitNumber() {
+        return 0;
+    }
+
+    @Override
+    public int getNumberOfBedrooms() {
+        return numberOfBedrooms;
+    }
+
+    @Override
+    public int getNumberOfBathrooms() {
+        return numberOfBathrooms;
+    }
+
+    @Override
+    public int getSquareFootage() {
+        return squareFootage;
+    }
+
+    @Override
+    public String getStreetNumber() {
+        return streetNumber;
+    }
+
+    @Override
     public String toString() {
         return "House{" +
                 "streetNumber='" + streetNumber + '\'' +
