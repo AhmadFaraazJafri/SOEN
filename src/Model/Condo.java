@@ -1,3 +1,5 @@
+package Model;
+
 public class Condo implements Property {
     private String streetNumber;
     private Address address;
@@ -91,5 +93,10 @@ public class Condo implements Property {
     @Override
     public void setAvailability(boolean available) {
         this.available = available;
+    }
+
+    @Override
+    public String getType() {
+        return "Condo";
     }
 }

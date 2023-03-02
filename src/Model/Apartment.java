@@ -1,3 +1,5 @@
+package Model;
+
 public class Apartment implements Property {
     private Address address;
     private int apartmentNumber;
@@ -68,6 +70,11 @@ public class Apartment implements Property {
     @Override
     public void setAvailability(boolean available) {
         this.available = available;
+    }
+
+    @Override
+    public String getType() {
+        return "Apartment";
     }
 
     @Override

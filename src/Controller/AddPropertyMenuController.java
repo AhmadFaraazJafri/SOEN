@@ -1,5 +1,6 @@
 package Controller;
 
+import View.CreatePropertyView;
 import View.MenuView;
 
 public class AddPropertyMenuController implements MenuController {
@@ -17,6 +18,8 @@ public class AddPropertyMenuController implements MenuController {
             selection = view.getSelection();
             if (selection == 1) {
                 // handle "Apartment" menu option
+                CreatePropertyController controller = new CreatePropertyController(new CreatePropertyView());
+                controller.createProperty(1);
             } else if (selection == 2) {
                 // handle "Condo" menu option
             } else if (selection == 3) {
