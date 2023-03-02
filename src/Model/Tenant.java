@@ -3,15 +3,30 @@ package Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tenant {
+public class Tenant implements TenantInterface{
     private String name;
     private String email;
+    private String phone;
     private List<Lease> leases;
 
-    public Tenant(String name, String email) {
+    public Tenant(String name, String email, String phone) {
         this.name = name;
         this.email = email;
+        this.phone = phone;
         this.leases = new ArrayList<>();
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    @Override
+    public Tenant clone() {
+        return new Tenant(name,email,phone);
     }
 
     public void addLease(Lease lease) {
@@ -40,5 +55,15 @@ public class Tenant {
 
     public void setLeases(List<Lease> leases) {
         this.leases = leases;
+    }
+
+    @Override
+    public String toString() {
+        return "Tenant{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", leases=" + leases +
+                '}';
     }
 }
