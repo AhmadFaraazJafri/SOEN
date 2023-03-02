@@ -1,6 +1,5 @@
 package View;
 
-import Model.Property;
 import Model.Tenant;
 
 import java.util.List;

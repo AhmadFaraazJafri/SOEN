@@ -3,7 +3,7 @@ package Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tenant implements TenantInterface{
+public class Tenant implements TenantInterface {
     private String name;
     private String email;
     private String phone;
@@ -26,7 +26,7 @@ public class Tenant implements TenantInterface{
 
     @Override
     public Tenant clone() {
-        return new Tenant(name,email,phone);
+        return new Tenant(name, email, phone);
     }
 
     public void addLease(Lease lease) {
@@ -49,9 +49,19 @@ public class Tenant implements TenantInterface{
         this.email = email;
     }
 
-    public List<Lease> getLeases() {
-        return leases;
+    public String getLeases() {
+        StringBuilder sb = new StringBuilder();
+        for (Lease lease : leases) {
+            sb.append("\nLease:\n")
+                    .append("Start date: ").append(lease.getStartDate()).append("\n")
+                    .append("End date: ").append(lease.getEndDate()).append("\n")
+                    .append("Property address: ").append(lease.getProperty().getAddress()).append("\n")
+                    .append("Rent amount: ").append(lease.getRentAmount()).append("\n")
+                    .append("Rent paid: ").append(lease.isRentPaid()).append("\n");
+        }
+        return sb.toString();
     }
+
 
     public void setLeases(List<Lease> leases) {
         this.leases = leases;
@@ -59,11 +69,12 @@ public class Tenant implements TenantInterface{
 
     @Override
     public String toString() {
+        String leases = getLeases();
         return "Tenant{" +
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
-                ", leases=" + leases +
+                leases +
                 '}';
     }
 }

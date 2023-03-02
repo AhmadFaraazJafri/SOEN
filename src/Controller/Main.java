@@ -1,6 +1,6 @@
 package Controller;
 
-
+import Model.Lease;
 import Model.Property;
 import Model.Tenant;
 import View.AddPropertyMenuView;
@@ -14,6 +14,7 @@ import java.util.Map;
 public class Main {
     public static List<Property> properties = new ArrayList<>();
     public static List<Tenant> tenants = new ArrayList<>();
+    public static List<Lease> leases = new ArrayList<>();
 
     public static void main(String[] args) {
         // create submenu controllers and add them to a map

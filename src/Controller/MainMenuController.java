@@ -27,9 +27,10 @@ public class MainMenuController implements MenuController {
                 // handle "Add a tenant" menu option
                 CreateTenantController controller = new CreateTenantController(new CreateTenantView());
                 controller.createTenant();
-
             } else if (selection == 3) {
                 // handle "Rent a unit" menu option
+                RentPropertyController rentPropertyController = new RentPropertyController(new RentPropertyView());
+                rentPropertyController.start();
             } else if (selection == 4) {
                 // handle "Display properties" menu option
                 PropertyListController propertyListController = new PropertyListController(main, new PropertyListView());

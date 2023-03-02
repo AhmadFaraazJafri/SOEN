@@ -14,7 +14,7 @@ public class Apartment implements Property {
         this.numberOfBedrooms = numberOfBedrooms;
         this.numberOfBathrooms = numberOfBathrooms;
         this.squareFootage = squareFootage;
-        this.available = false;
+        this.available = true;
     }
 
     public void setAddress(Address address) {
@@ -64,7 +64,7 @@ public class Apartment implements Property {
 
     @Override
     public String getAddress() {
-        return "Apt #" + apartmentNumber + ", " +address.toString();
+        return "Apt #" + apartmentNumber + ", " + address.toString();
     }
 
     @Override

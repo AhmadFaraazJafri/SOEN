@@ -12,9 +12,9 @@ public class CreateTenantController {
         this.view = view;
     }
 
-    public void createTenant(){
+    public void createTenant() {
         //create a tenant prototype
-        TenantInterface tenantPrototype = new Tenant("Name","name@email.com","0000000000");
+        TenantInterface tenantPrototype = new Tenant("Name", "name@email.com", "0000000000");
 
         //clone the prototype and set the parameters
         Tenant tenant = tenantPrototype.clone();

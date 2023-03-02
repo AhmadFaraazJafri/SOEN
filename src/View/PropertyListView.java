@@ -9,8 +9,9 @@ public class PropertyListView {
         if (properties.isEmpty()) {
             System.out.println("No properties found.");
         } else {
+            int number = 1;
             for (Property property : properties) {
-                System.out.println(property.toString());
+                System.out.println(number++ + ". " + property.toString());
             }
         }
     }

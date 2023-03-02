@@ -16,7 +16,7 @@ public class Condo implements Property {
         this.numberOfBedrooms = numberOfBedrooms;
         this.numberOfBathrooms = numberOfBathrooms;
         this.squareFootage = squareFootage;
-        this.available = false;
+        this.available = true;
     }
 
     public String getStreetNumber() {
@@ -80,7 +80,7 @@ public class Condo implements Property {
 
     @Override
     public String getAddress() {
-        return "UnitNumber=" + unitNumber + ", StreetNumber='" + streetNumber + '\'' + ", " +address.toString();
+        return "UnitNumber=" + unitNumber + ", StreetNumber='" + streetNumber + '\'' + ", " + address.toString();
     }
 
     @Override

@@ -14,7 +14,7 @@ public class House implements Property {
         this.numberOfBedrooms = numberOfBedrooms;
         this.numberOfBathrooms = numberOfBathrooms;
         this.squareFootage = squareFootage;
-        this.available = false;
+        this.available = true;
     }
 
     @Override
@@ -66,7 +66,7 @@ public class House implements Property {
     @Override
     public String toString() {
         return "House{" +
-                getAddress()  +
+                getAddress() +
                 ", numberOfBedrooms=" + numberOfBedrooms +
                 ", numberOfBathrooms=" + numberOfBathrooms +
                 ", squareFootage=" + squareFootage +

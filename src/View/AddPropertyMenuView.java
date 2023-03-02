@@ -15,7 +15,7 @@ public class AddPropertyMenuView implements MenuView {
     public void display() {
         System.out.println(MENU_TITLE);
         for (int i = 0; i < MENU_OPTIONS.length; i++) {
-            System.out.printf("%d. %s\n", i+1, MENU_OPTIONS[i]);
+            System.out.printf("%d. %s\n", i + 1, MENU_OPTIONS[i]);
         }
     }
 
