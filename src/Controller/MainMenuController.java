@@ -45,6 +45,8 @@ public class MainMenuController implements MenuController {
                 // handle "Display vacant units" menu option
             } else if (selection == 8) {
                 // handle "Display all leases" menu option
+                DisplayLeaseController leaseController = new DisplayLeaseController(main, new DisplayLeaseView());
+                leaseController.displayLeases();
             } else if (selection == 9) {
                 System.out.println("Goodbye!");
             } else {

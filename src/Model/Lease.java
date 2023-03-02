@@ -69,13 +69,8 @@ public class Lease {
 
     @Override
     public String toString() {
-        return "Lease{" +
-                "tenant=" + tenant +
-                ", property=" + property +
-                ", startDate=" + startDate +
-                ", endDate=" + endDate +
-                ", rentAmount=" + rentAmount +
-                ", rentPaid=" + rentPaid +
+        return tenant + "\n" +
+                ", Property Details=" + property +
                 '}';
     }
 }
