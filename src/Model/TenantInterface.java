@@ -6,4 +6,5 @@ public interface TenantInterface extends Cloneable {
     public Tenant clone();
 
     public String toString();
+
 }
