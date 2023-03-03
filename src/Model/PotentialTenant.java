@@ -11,9 +11,10 @@ public class PotentialTenant implements TenantObserver {
 
     @Override
     public void update() {
-
+        //sendEmail();
     }
 
+    //put this method into corresponding view
     public void sendEmail() {
         System.out.println("Email sent to " + name + "(" + email + ") : The property you wanted is available. ");
     }

@@ -41,8 +41,12 @@ public class MainMenuController implements MenuController {
                 tenantListController.displayTenants();
             } else if (selection == 6) {
                 // handle "Display rented units" menu option
+                PropertiesAvailableOrUnavailableController propertiesAvailableOrUnavailableController = new PropertiesAvailableOrUnavailableController(new PropertiesAvailableOrUnavailableView());
+                propertiesAvailableOrUnavailableController.displayProperties(Main.properties,false);
             } else if (selection == 7) {
                 // handle "Display vacant units" menu option
+                PropertiesAvailableOrUnavailableController propertiesAvailableOrUnavailableController = new PropertiesAvailableOrUnavailableController(new PropertiesAvailableOrUnavailableView());
+                propertiesAvailableOrUnavailableController.displayProperties(Main.properties,true);
             } else if (selection == 8) {
                 // handle "Display all leases" menu option
                 DisplayLeaseController leaseController = new DisplayLeaseController(main, new DisplayLeaseView());
