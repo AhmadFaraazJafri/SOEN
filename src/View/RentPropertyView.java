@@ -84,4 +84,8 @@ public class RentPropertyView {
         scanner.nextLine();
         return rentAmount;
     }
+
+    public void registeredtoObserver() {
+        System.out.println("The unit you are interested in is occupied right now. You will be notified when the unit is available.");
+    }
 }
