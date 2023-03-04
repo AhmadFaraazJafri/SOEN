@@ -16,6 +16,13 @@ public class Tenant implements TenantInterface {
         this.leases = new ArrayList<>();
     }
 
+    public Tenant(String name, String email, String phone, List<Lease> leases) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.leases = leases;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -26,7 +33,7 @@ public class Tenant implements TenantInterface {
 
     @Override
     public Tenant clone() {
-        return new Tenant(name, email, phone);
+        return new Tenant(name, email, phone, leases);
     }
 
     public void addLease(Lease lease) {
