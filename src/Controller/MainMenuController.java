@@ -53,7 +53,9 @@ public class MainMenuController implements MenuController {
                 leaseController.displayLeases();
             }  else if (selection == 9) {
                 //end lease manually as admin. or end lease when lease date expires
-                Main.properties.get(0).setAvailability(true);
+                RefreshLeaseController refreshLeaseController = new RefreshLeaseController(new ResfreshLeaseView());
+                refreshLeaseController.refreshLease();
+                //Main.properties.get(0).setAvailability(true);
             } else if (selection == 10) {
                 System.out.println("Goodbye!");
             } else {
