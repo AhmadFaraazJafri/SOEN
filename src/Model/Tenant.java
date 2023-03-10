@@ -1,5 +1,7 @@
 package Model;
 
+import View.SendMailView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -88,6 +90,7 @@ public class Tenant implements TenantObserver,TenantInterface {
     @Override
     public void update(Property property) {
         //do this via view
-        System.out.println("Email sent to: "+ this.getEmail() + "\nProperty " + property.getAddress() + " is now available.");
+        SendMailView sendMailView = new SendMailView();
+        sendMailView.display(this.getEmail(), property.getAddress());
     }
 }

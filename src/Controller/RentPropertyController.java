@@ -37,7 +37,6 @@ public class RentPropertyController {
                             view.registeredtoObserver();
                             //register a tenant
                             Main.properties.get(propertySelection - 1).registerTenant( Main.tenants.get(tenantSelection - 1));
-                            System.out.println("TEST");
                         }
                     } else {
                         view.displayError();
