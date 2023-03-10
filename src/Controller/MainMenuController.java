@@ -18,7 +18,7 @@ public class MainMenuController implements MenuController {
     @Override
     public void start() {
         int selection = -1;
-        while (selection != 11) {
+        while (selection != 13) {
             view.display();
             selection = view.getSelection();
             if (selection == 1) {
@@ -58,7 +58,15 @@ public class MainMenuController implements MenuController {
             }else if (selection == 10) {
                 DisplayRentLeaseController displayRentLeaseController = new DisplayRentLeaseController(main, new DisplayLeaseView());
                 displayRentLeaseController.displayLeases();
-            } else if (selection == 11) {
+            }  else if (selection == 11) {
+                // handle "Display unpaid leases" menu option
+                RentPaidOrUnpaidController rentPaidOrUnpaidController = new RentPaidOrUnpaidController(new RentPaidOrUnpaidView());
+                rentPaidOrUnpaidController.displayPaidOrUnpaidLease(Main.leases,false);
+            } else if (selection == 12) {
+                // handle "Display paid leases" menu option
+                RentPaidOrUnpaidController rentPaidOrUnpaidController = new RentPaidOrUnpaidController(new RentPaidOrUnpaidView());
+                rentPaidOrUnpaidController.displayPaidOrUnpaidLease(Main.leases,true);
+            }else if (selection == 13) {
                 System.out.println("Goodbye!");
             } else {
                 view.showError("Invalid selection.");

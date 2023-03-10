@@ -15,6 +15,8 @@ public class MainMenuView implements MenuView {
             "Display all leases",
             "Make available",
             "Modify Rent paid for property",
+            "List all leases which rent are unpaid for",
+            "List all leases which rent are paid for",
             "Exit"
     };
 
