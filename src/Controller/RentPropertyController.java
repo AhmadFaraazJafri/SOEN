@@ -1,10 +1,6 @@
 package Controller;
 
-import Model.ConcretePropertiesSubject;
 import Model.Lease;
-import Model.PotentialTenant;
-import Model.PropertiesSubject;
-import Model.TenantObserver;
 import View.RentPropertyView;
 
 import java.util.Date;
@@ -39,12 +35,9 @@ public class RentPropertyController {
                         } else {
                             //Observer Pattern Implementation
                             view.registeredtoObserver();
-                            TenantObserver tenantObserver = new PotentialTenant(Main.tenants.get(tenantSelection - 1).getName(), Main.tenants.get(tenantSelection - 1).getEmail());
-                            PropertiesSubject propertiesSubject = new ConcretePropertiesSubject();
-                            //Use this line while making the property available?
-//                            PropertiesSubject propertiesSubject = new ConcretePropertiesSubject();
-                            //propertiesSubject.notifyTenant();
-                            propertiesSubject.registerTenant(tenantObserver);
+                            //register a tenant
+                            Main.properties.get(propertySelection - 1).registerTenant( Main.tenants.get(tenantSelection - 1));
+                            System.out.println("TEST");
                         }
                     } else {
                         view.displayError();

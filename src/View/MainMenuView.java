@@ -13,6 +13,7 @@ public class MainMenuView implements MenuView {
             "Display rented units",
             "Display vacant units",
             "Display all leases",
+            "Make available",
             "Exit"
     };
 

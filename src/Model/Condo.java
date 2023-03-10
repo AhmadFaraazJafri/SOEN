@@ -1,6 +1,10 @@
 package Model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Condo implements Property {
+    private List<TenantObserver> observers = new ArrayList<>();
     private String streetNumber;
     private Address address;
     private int unitNumber;
@@ -85,16 +89,38 @@ public class Condo implements Property {
 
     @Override
     public boolean isAvailable() {
-        return false;
+        return available;
     }
 
     @Override
     public void setAvailability(boolean available) {
         this.available = available;
+        if (available) {
+            notifyTenant();
+        }
     }
-
     @Override
     public String getType() {
         return "Condo";
+    }
+
+    @Override
+    public void registerTenant(TenantObserver tenant) {
+        observers.add(tenant);
+    }
+
+    @Override
+    public void deregisterTenant(TenantObserver tenant) {
+        observers.remove(tenant);
+    }
+
+    @Override
+    public void notifyTenant() {
+        if (available) {
+            for (TenantObserver tenant : observers) {
+                tenant.update(this);
+            }
+        }
+
     }
 }

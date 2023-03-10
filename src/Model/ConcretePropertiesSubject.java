@@ -33,10 +33,8 @@ public class ConcretePropertiesSubject implements PropertiesSubject {
 
     @Override
     public void notifyTenant() {
-
         for (TenantObserver tenant : tenantObservers) {
-            tenant.update();
+            tenant.update((Property) this);
         }
-
     }
 }

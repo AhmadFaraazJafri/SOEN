@@ -1,6 +1,6 @@
 package Model;
 
-public interface Property {
+public interface Property extends PropertiesSubject{
     String getAddress();
 
     boolean isAvailable();

@@ -3,7 +3,7 @@ package Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tenant implements TenantInterface {
+public class Tenant implements TenantObserver,TenantInterface {
     private String name;
     private String email;
     private String phone;
@@ -83,5 +83,11 @@ public class Tenant implements TenantInterface {
                 ", phone='" + phone + '\'' +
                 leases +
                 '}';
+    }
+
+    @Override
+    public void update(Property property) {
+        //do this via view
+        System.out.println("Email sent to: "+ this.getEmail() + "\nProperty " + property.getAddress() + " is now available.");
     }
 }

@@ -1,6 +1,6 @@
 package Model;
 
-public interface TenantInterface extends Cloneable {
+public interface TenantInterface extends Cloneable  {
     public void addLease(Lease lease);
 
     public Tenant clone();

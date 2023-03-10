@@ -18,7 +18,7 @@ public class MainMenuController implements MenuController {
     @Override
     public void start() {
         int selection = -1;
-        while (selection != 9) {
+        while (selection != 10) {
             view.display();
             selection = view.getSelection();
             if (selection == 1) {
@@ -51,7 +51,10 @@ public class MainMenuController implements MenuController {
                 // handle "Display all leases" menu option
                 DisplayLeaseController leaseController = new DisplayLeaseController(main, new DisplayLeaseView());
                 leaseController.displayLeases();
-            } else if (selection == 9) {
+            }  else if (selection == 9) {
+                Main.properties.get(0).setAvailability(true);
+                System.out.println("test");
+            } else if (selection == 10) {
                 System.out.println("Goodbye!");
             } else {
                 view.showError("Invalid selection.");

@@ -1,5 +1,6 @@
 package Model;
 
 public interface TenantObserver {
-    void update();
+
+    void update(Property property);
 }
