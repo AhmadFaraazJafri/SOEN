@@ -14,6 +14,7 @@ public class MainMenuView implements MenuView {
             "Display vacant units",
             "Display all leases",
             "Make available",
+            "Modify Rent paid for property",
             "Exit"
     };
 

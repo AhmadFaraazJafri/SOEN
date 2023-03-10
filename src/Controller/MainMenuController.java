@@ -18,7 +18,7 @@ public class MainMenuController implements MenuController {
     @Override
     public void start() {
         int selection = -1;
-        while (selection != 10) {
+        while (selection != 11) {
             view.display();
             selection = view.getSelection();
             if (selection == 1) {
@@ -55,8 +55,10 @@ public class MainMenuController implements MenuController {
                 //end lease manually as admin. or end lease when lease date expires
                 RefreshLeaseController refreshLeaseController = new RefreshLeaseController(new ResfreshLeaseView());
                 refreshLeaseController.refreshLease();
-                //Main.properties.get(0).setAvailability(true);
-            } else if (selection == 10) {
+            }else if (selection == 10) {
+                DisplayRentLeaseController displayRentLeaseController = new DisplayRentLeaseController(main, new DisplayLeaseView());
+                displayRentLeaseController.displayLeases();
+            } else if (selection == 11) {
                 System.out.println("Goodbye!");
             } else {
                 view.showError("Invalid selection.");

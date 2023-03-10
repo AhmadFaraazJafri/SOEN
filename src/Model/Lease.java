@@ -16,7 +16,7 @@ public class Lease {
         this.startDate = startDate;
         this.endDate = endDate;
         this.rentAmount = rentAmount;
-        this.rentPaid = false;
+        this.rentPaid = true;
     }
 
     public Tenant getTenant() {
