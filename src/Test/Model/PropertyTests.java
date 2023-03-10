@@ -63,5 +63,38 @@ public class PropertyTests {
 
         assertTrue(property instanceof Apartment);
     }
+
+    private Tenant testTenant = new Tenant("AFJ", "afj@example.com", "123-456-7890");
+    private Apartment testApartment = new Apartment(new Address("123 Main St", "Anytown", "Anystate", "12345"), 1, 2, 1, 1000);
+
+    @Test
+    public void testRegisterTenant() {
+        // register the test tenant with the test apartment
+        testApartment.registerTenant(testTenant);
+
+        // assert that the tenant is now in the list of observers
+        assertTrue(testApartment.observers.contains(testTenant));
+    }
+
+    @Test
+    public void testDeregisterTenant() {
+        // register the test tenant with the test apartment
+        testApartment.registerTenant(testTenant);
+
+        // deregister the test tenant from the test apartment
+        testApartment.deregisterTenant(testTenant);
+
+        // assert that the tenant is no longer in the list of observers
+        assertFalse(testApartment.observers.contains(testTenant));
+    }
+
+    @Test
+    public void testNotifyTenant() {
+        testApartment.registerTenant(testTenant);
+
+        testApartment.setAvailable(false);
+
+        testApartment.notifyTenant();
+    }
 }
 
