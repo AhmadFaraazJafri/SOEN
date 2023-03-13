@@ -1,15 +1,25 @@
+/***
+ * ............................................................
+ *    Project Phase 1 , SOEN 6441
+ *    ©(Faraaz, Himangshu, Shivesh)
+ *    Written by:
+ *                @author Himangshu Shekhar Baruah , Student ID 40229774
+ *                @author Ahmad Faraaz Jafri, Student ID 40232742
+ *                @author Shivesh Chaudhary, Student ID 40228107
+ * ............................................................
+ */
 package Model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class House implements Property {
-    private List<TenantObserver> observers = new ArrayList<>();
-    private String streetNumber;
-    private Address address;
-    private int numberOfBedrooms;
-    private int numberOfBathrooms;
-    private int squareFootage;
+    private final List<TenantObserver> observers = new ArrayList<>();
+    private final String streetNumber;
+    private final Address address;
+    private final int numberOfBedrooms;
+    private final int numberOfBathrooms;
+    private final int squareFootage;
     private boolean available;
 
     public House(String streetNumber, Address address, int numberOfBedrooms, int numberOfBathrooms, int squareFootage) {
@@ -72,25 +82,24 @@ public class House implements Property {
 
     @Override
     public String toString() {
-        return "House{" +
+        return "House details: " +
                 getAddress() +
                 ", numberOfBedrooms=" + numberOfBedrooms +
                 ", numberOfBathrooms=" + numberOfBathrooms +
                 ", squareFootage=" + squareFootage +
-                ", available=" + available +
-                '}';
+                ", available=" + available;
     }
-
+    // Method to register a tenant to waiting list
     @Override
     public void registerTenant(TenantObserver tenant) {
         observers.add(tenant);
     }
-
+    // Method to deregister a tenant to waiting list
     @Override
     public void deregisterTenant(TenantObserver tenant) {
         observers.remove(tenant);
     }
-
+    // Method to notify a tenant
     @Override
     public void notifyTenant() {
         if (available) {

@@ -1,10 +1,20 @@
+/***
+ * ............................................................
+ *    Project Phase 1 , SOEN 6441
+ *    ©(Faraaz, Himangshu, Shivesh)
+ *    Written by:
+ *                @author Himangshu Shekhar Baruah , Student ID 40229774
+ *                @author Ahmad Faraaz Jafri, Student ID 40232742
+ *                @author Shivesh Chaudhary, Student ID 40228107
+ * ............................................................
+ */
 package Model;
 
 import View.SendMailView;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//Tenant class containing the tenant info and the leases held by the tenant
 public class Tenant implements TenantObserver, TenantInterface {
     private String name;
     private String email;
@@ -79,12 +89,11 @@ public class Tenant implements TenantObserver, TenantInterface {
     @Override
     public String toString() {
         String leases = getLeases();
-        return "Tenant{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                leases +
-                '}';
+        return "Tenant Details: "+"\n" +
+                "name ='" + name + '\'' +
+                ", email ='" + email + '\'' +
+                ", phone ='" + phone + '\'' +
+                leases ;
     }
 
     @Override

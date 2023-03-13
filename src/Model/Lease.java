@@ -1,7 +1,17 @@
+/***
+ * ............................................................
+ *    Project Phase 1 , SOEN 6441
+ *    ©(Faraaz, Himangshu, Shivesh)
+ *    Written by:
+ *                @author Himangshu Shekhar Baruah , Student ID 40229774
+ *                @author Ahmad Faraaz Jafri, Student ID 40232742
+ *                @author Shivesh Chaudhary, Student ID 40228107
+ * ............................................................
+ */
 package Model;
 
 import java.util.Date;
-
+// Lease class is the class for lease which attaches a property to a tenant
 public class Lease {
     private Tenant tenant;
     private Property property;
@@ -69,8 +79,6 @@ public class Lease {
 
     @Override
     public String toString() {
-        return tenant + "\n" +
-                ", Property Details=" + property +
-                '}';
+        return "Lease -->"+tenant  + property ;
     }
 }

@@ -1,10 +1,20 @@
+/***
+ * ............................................................
+ *    Project Phase 1 , SOEN 6441
+ *    ©(Faraaz, Himangshu, Shivesh)
+ *    Written by:
+ *                @author Himangshu Shekhar Baruah , Student ID 40229774
+ *                @author Ahmad Faraaz Jafri, Student ID 40232742
+ *                @author Shivesh Chaudhary, Student ID 40228107
+ * ............................................................
+ */
 package Model;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// Condo class is the subclass of Property class.
 public class Condo implements Property {
-    private List<TenantObserver> observers = new ArrayList<>();
+    private final List<TenantObserver> observers = new ArrayList<>();
     private String streetNumber;
     private Address address;
     private int unitNumber;
@@ -73,13 +83,12 @@ public class Condo implements Property {
 
     @Override
     public String toString() {
-        return "Condo{" +
+        return "Condo details: " +
                 getAddress() +
                 ", numberOfBedrooms=" + numberOfBedrooms +
                 ", numberOfBathrooms=" + numberOfBathrooms +
                 ", squareFootage=" + squareFootage +
-                ", available=" + available +
-                '}';
+                ", available=" + available ;
     }
 
     @Override
@@ -103,17 +112,17 @@ public class Condo implements Property {
     public String getType() {
         return "Condo";
     }
-
+    // Method to register a tenant to waiting list
     @Override
     public void registerTenant(TenantObserver tenant) {
         observers.add(tenant);
     }
-
+    // Method to deregister a tenant to waiting list
     @Override
     public void deregisterTenant(TenantObserver tenant) {
         observers.remove(tenant);
     }
-
+    // Method to notify a tenant
     @Override
     public void notifyTenant() {
         if (available) {

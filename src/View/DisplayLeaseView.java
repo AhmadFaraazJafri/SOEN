@@ -1,3 +1,13 @@
+/***
+ * ............................................................
+ *    Project Phase 1 , SOEN 6441
+ *    ©(Faraaz, Himangshu, Shivesh)
+ *    Written by:
+ *                @author Himangshu Shekhar Baruah , Student ID 40229774
+ *                @author Ahmad Faraaz Jafri, Student ID 40232742
+ *                @author Shivesh Chaudhary, Student ID 40228107
+ * ............................................................
+ */
 package View;
 
 import Model.Lease;
@@ -42,11 +52,6 @@ public class DisplayLeaseView {
         Scanner scanner = new Scanner(System.in);
         int val = scanner.nextInt();
         scanner.nextLine();
-        if (val == 1){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return val == 1;
     }
 }

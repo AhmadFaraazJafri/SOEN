@@ -1,3 +1,13 @@
+/***
+ * ............................................................
+ *    Project Phase 1 , SOEN 6441
+ *    ©(Faraaz, Himangshu, Shivesh)
+ *    Written by:
+ *                @author Himangshu Shekhar Baruah , Student ID 40229774
+ *                @author Ahmad Faraaz Jafri, Student ID 40232742
+ *                @author Shivesh Chaudhary, Student ID 40228107
+ * ............................................................
+ */
 package Test.Model;
 
 import Model.*;
@@ -50,7 +60,7 @@ public class PropertyTests {
         PropertyCreator creator = new ApartmentCreator();
         Property apartment = creator.createProperty("123", address, 1, 2, 1, 1000);
 
-        String expected = "Apartment{Apt #1, streetName='123 Main St', city='Anytown', province='Anystate', postalCode='12345', numberOfBedrooms=2, numberOfBathrooms=1, squareFootage=1000, available=true}";
+        String expected = "Apartment Details: Apt #1, streetName='123 Main St', city='Anytown', province='Anystate', postalCode='12345', numberOfBedrooms=2, numberOfBathrooms=1, squareFootage=1000, available=true";
 
         assertEquals(expected, apartment.toString());
     }
@@ -64,8 +74,8 @@ public class PropertyTests {
         assertTrue(property instanceof Apartment);
     }
 
-    private Tenant testTenant = new Tenant("AFJ", "afj@example.com", "123-456-7890");
-    private Apartment testApartment = new Apartment(new Address("123 Main St", "Anytown", "Anystate", "12345"), 1, 2, 1, 1000);
+    private final Tenant testTenant = new Tenant("AFJ", "afj@example.com", "123-456-7890");
+    private final Apartment testApartment = new Apartment(new Address("123 Main St", "Anytown", "Anystate", "12345"), 1, 2, 1, 1000);
 
     @Test
     public void testRegisterTenant() {

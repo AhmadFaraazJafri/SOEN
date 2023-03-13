@@ -1,8 +1,18 @@
+/***
+ * ............................................................
+ *    Project Phase 1 , SOEN 6441
+ *    ©(Faraaz, Himangshu, Shivesh)
+ *    Written by:
+ *                @author Himangshu Shekhar Baruah , Student ID 40229774
+ *                @author Ahmad Faraaz Jafri, Student ID 40232742
+ *                @author Shivesh Chaudhary, Student ID 40228107
+ * ............................................................
+ */
 package Model;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// Apartment Class is a subclass of Property class.
 public class Apartment implements Property {
     public List<TenantObserver> observers = new ArrayList<>();
     private Address address;
@@ -94,25 +104,25 @@ public class Apartment implements Property {
 
     @Override
     public String toString() {
-        return "Apartment{" +
+        return "Apartment Details: " +
                 getAddress() +
                 ", numberOfBedrooms=" + numberOfBedrooms +
                 ", numberOfBathrooms=" + numberOfBathrooms +
                 ", squareFootage=" + squareFootage +
-                ", available=" + available +
-                '}';
+                ", available=" + available
+                ;
     }
-
+    // Method to register a tenant to waiting list
     @Override
     public void registerTenant(TenantObserver tenant) {
         observers.add(tenant);
     }
-
+    // Method to deregister a tenant to waiting list
     @Override
     public void deregisterTenant(TenantObserver tenant) {
         observers.remove(tenant);
     }
-
+    // Method to notify tenant when unit is available
     @Override
     public void notifyTenant() {
         if (available) {
